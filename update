@@ -1,0 +1,5 @@
+#!/bin/bash
+
+sudo apt update && 
+apt list --upgradable | awk '{print$1}' | cut -f1 -d '/' > update.txt && 
+sed -i 1d update.txt | xargs sudo apt install -y

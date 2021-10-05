@@ -1,8 +1,8 @@
 #### A strange way to update your Debian-based system
 
-* sudo apt update && apt list --upgradable | awk '{print$1}' | cut -f1 -d '/' > some.txt && sed -i 1d some.txt && cat some.txt | xargs sudo apt install -y
+``` sudo apt update && apt list --upgradable | awk '{print$1}' | cut -f1 -d '/' > some.txt && sed -i 1d some.txt && cat some.txt | xargs sudo apt install -y```
 
-#### We run 'sudo apt update' and after the command finishes, it says that, for example: 64 packages can be upgraded. Run 'apt list --upgradable' to see them.
+#### We run ```sudo apt update``` and after the command finishes, it says that, for example: 64 packages can be upgraded. Run ```apt list --upgradable``` to see them.
 
 #### We run 'apt list --upgradable' and shows some information about the packages.
 

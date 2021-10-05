@@ -2,4 +2,4 @@
 
 sudo apt update && 
 apt list --upgradable | awk '{print$1}' | cut -f1 -d '/' > update.txt && 
-sed -i 1d update.txt | xargs sudo apt install -y
+sed -i 1d update.txt && cat update.txt | xargs sudo apt install -y
